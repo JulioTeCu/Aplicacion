@@ -1,0 +1,20 @@
+.logo{
+	text-align: left;
+}
+.t1{
+	text-decoration: underline;
+}
+body {
+	background: #6B84FF;
+}
+
+
+.menu{
+	color :red;
+	text-align: justify;
+	background-color: white;
+}
+footer{
+	color: white;
+	background-color: black;
+}
