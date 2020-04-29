@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+    $servidor = "localhost";
+    $usuario = "root";
+    $clave="";
+    $db ="prueba";
+
+    $conex = mysqli_connect($servidor, $usuario, $clave, $db);
+
+    if (!$conex) {
+    	echo"Eroro en la conexion con el servidor";
+    }
+
+ ?>
+
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -82,6 +96,45 @@
 
 
             </article>
+            <article>
+            	<div class="tabla">
+            		<table>
+            			<tr>
+            				<th>Municipio</th>
+            				<th>Nombre</th>
+            				<th>Cargo</th>
+            				<th>Telefono</th>
+            				<th>Correo</th>
+            			</tr>
+            			<?php
+            			$consulta = "SELECT * FROM datos";
+            			$ejecutarConsulta = mysqli_query($conex, $consulta);
+            			$verFilas = mysqli_num_rows($ejecutarConsulta);
+            			$fila = mysqli_fetch_array($ejecutarConsulta);
+            			if(!$ejecutarConsulta){
+            				echo "Error en la Consulta";
+            			}else{
+            				if($verFilas<1){
+            					echo "<tr><td>Sin registros </td></tr>";
+            				}else{
+            					for($i=0;$i<=$fila;$i++){
+            						echo '
+            						<tr>
+            							<td>'.$fila[0].'</td>
+            							<td>'.$fila[1].'</td>
+            							<td>'.$fila[2].'</td>
+            							<td>'.$fila[3].'</td>
+            							<td>'.$fila[4].'</td>
+            						</tr>
+            						';
+            						$fila = mysqli_fetch_array($ejecutarConsulta);
+            					}
+            				}
+            			}
+            			?>
+            		</table>
+            	</div>
+            </article>
     </section>
         <aside>
     
@@ -139,3 +192,32 @@
 
 </body>
 </html>
+ <?php
+    if (isset($_POST['enviar'])){
+    	
+		$municipio = $_POST["municipio"];
+		$nombre = $_POST["nombre"];
+		$cargo = $_POST["cargo"];
+		$telefono = $_POST["telefono"];
+		$correo = $_POST["correo"];
+
+		$insertar = "INSERT INTO datos  VALUES('$municipio',
+											   '$nombre',
+											   '$cargo',
+											   '$telefono',
+											   '$correo')";
+		$ejecutar = mysqli_query($conex,$insertar);
+
+		if(!$ejecutar){
+			echo "Error en la linea de sql";
+		}
+    }
+?>
+
+
+
+
+
+
+
+

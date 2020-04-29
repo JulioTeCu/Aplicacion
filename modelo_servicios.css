@@ -4,29 +4,23 @@
 }
 
 body {
-	background: #6B84FF;
+	background: #8E898F;
 }
-
+/*background: #;  */
 header { 
-	background: #6B84FF; 
+	background-color: #6B84FF;
 	width: 90%;
 	max-width: 1200px; 
 	margin: 20px auto;
 }
 .main, footer { 
-	background: #59E0E2; 
+	background-color: #F7BBFF;
 	width: 90%;
 	max-width: 1200px; 
 	margin: 20px auto;
 }
 header nav{
 	background-color: #AF46DE;
-}
-img{
-	position:relative;
-	text-align: left;
-	width: 300px;
-	top:10px;
 }
 
 .menu{
@@ -45,10 +39,16 @@ img{
 	display: inline-block;
 	color: #fff;
 }
-
+ 
 .menu li a:hover {
 	background-color:#C06AE7;
 	color:#fff;
+}
+img{
+	position:relative;
+	text-align: left;
+	width: 300px;
+	top:10px;
 }
 .main{
 	overflow: hidden;
@@ -68,6 +68,9 @@ img{
 
 .t1{
 	text-decoration: underline;
+}
+.formulario label{
+	
 }
 
 aside{
