@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gestion municipal Luis</title>
+    <link rel="stylesheet" type="text/css" href="css/modelo_form.css">
+</head>
+<body>
+    
+    <header>
+    
+        <img  clas="logo" src="imagenes/logo.jpg"  alt="Logotipo de GMI" title="Logotipo hecho por GMI"  >   
+        <br></br>
+    
+    <nav>
+    
+        <ul class="menu" >
+    
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="contactenos.html">Contactenos</a></li>
+              
+        </ul>
+    
+    </nav>
+
+</header>
+
+    <div class="main">
+           
+                <h3>Solicitar un servicio </h3>
+                <form class="insert" action="http://localhost/formulario/Pagina/insertar.php" method="post">
+                    <div>
+                        <p class="par">INSERTAR DATOS</p>
+                        <label for="municipio" >
+                            <br>
+                        <p>Municipio</p>   
+                            <input type="text" placeholder="Municipio de interes"  name="municipio">
+                        </label>
+                    </div>
+
+                    <div>
+                        <label for="nombre">
+                        <p>Nombre</p>   
+                            <input type="text" placeholder="Nombre completo"  name="nombre"> 
+                        </label>
+                    </div>
+                    <div>
+                        <label for="cargo">
+                        <p>Cargo</p>    
+                            <input type="text" placeholder="Cargo"  name="cargo">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="telefono">
+                        <p>Teléfono</p>  
+                            <input type="text" placeholder="Teléfono"  name="telefono">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="correo">
+                        <p>Correo</p>    
+                            <input type="email" placeholder="Correo"  name="correo">
+                        </label>
+                    </div>
+                      <div>
+                        <label for="servicios">
+                            <p>Servicios</p>  
+                            <select  class="op" name="servicios">
+                                <option value="servicio">Servicios</option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="capacitacion">Capacitación</option>
+                                <option value="planes">Elaboración de planes de trabajo</option>>
+                                <option value="informes">Elaboración de informes</option>
+                                <option value="gestion">Análisis de la gestión</option>
+                            </select> 
+                        </label>
+                    </div>
+                    
+                    <label>
+                        <br>
+                        <input type="submit" value="Envíar" name="enviar">
+                    </label>
+
+            
+                </form>
+       </div>
+       <br>
+        <div class="delete">
+                  <form class="eliminar" action="http://localhost/formulario/Pagina/eliminar.php" method="POST"> 
+                <div>
+                     <p class="par">ELIMINAR DATOS</p>
+                    <label>
+                        <br>
+                        <p>Número de Teléfono</p>
+                        <input type="text" name="telefono" placeholder="Teléfono"><br/>
+                        <br>
+                        <input type="submit" value="Elimar Datos" name="btnEliminar" >
+                    </label>
+                </div>
+            </form>
+
+        </div>
+        <br>
+        <div class="main">
+            <form class="actu" action="http://localhost/formulario/Pagina/actualizar.php" method="POST">
+                
+
+                     <div>
+                        <p class="par">ACTUALIZAR DATOS</p>
+                        <label for="municipio" >
+                            <br>
+                        <p>Municipio</p>   
+                            <input type="text" placeholder="Municipio de interes"  name="municipio">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="nombre">
+                        <p>Nombre</p>   
+                            <input type="text" placeholder="Nombre completo"  name="nombre"> 
+                        </label>
+                    </div>
+                    <div>
+                        <label for="cargo">
+                        <p>Cargo</p>    
+                            <input type="text" placeholder="Cargo"  name="cargo">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="telefono">
+                        <p>Teléfono</p>  
+                            <input type="text" placeholder="Teléfono"  name="telefono">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="correo">
+                        <p>Correo</p>    
+                            <input type="email" placeholder="Correo"  name="correo">
+                        </label>
+                    </div>
+                      <div>
+                        <label for="servicios">
+                            <p>Servicios</p>  
+                            <select  class="op" name="servicios">
+                                <option value="servicio">Servicios</option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="capacitacion">Capacitación</option>
+                                <option value="planes">Elaboración de planes de trabajo</option>
+                                <option value="informes">Elaboración de informes</option>
+                                <option value="gestion">Análisis de la gestión</option>
+                            </select> 
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <br>
+                        <input type="submit" value="Actualizar Datos" name="btnActualizar" >
+                    </label>
+                </div>
+                    
+                
+            </form>
+            
+        </div>
+        <br>
+        <div class="registro">
+            <form action="http://localhost/formulario/Pagina/registros.php" method="POST">
+                <br>
+                <input type="submit" value="Ver Registros" name="btnRegistros">
+            </form>
+        </div>
+
+    <footer class="footer">
+        <div class="foobody">
+            <div class="colum1">
+                <h2>Más información de la empresa</h2>
+
+                <p>Es una empresa que ...........</p>
+
+            </div>
+
+            <div class="colum2">
+                <h2>Redes sociales</h2>
+                <div class="row">
+                    <img src="imagenes/bloogger.png">
+                    <a target="_blank" href="">Siguenos en Bloogger </a>
+                </div>
+                <div class="row">
+                    <img src="imagenes/facebook.jpg">
+                    <a target="_blank" href="">Siguenos en Facebook </a>
+                </div>
+                <div class="row">
+                    <img src="imagenes/twitter.png">
+                    <a target="_blank" href="">Siguenos en Twitter </a>
+                </div>
+        
+                
+            </div>
+            <div class="colum3">
+                <h2>Información de Contacto</h2>
+                <div class="row2">
+                    <img src="imagenes/phone.png">
+                    <label>+52-246-135-8661 </label>
+                </div>
+                <div class="row2">
+                    <img src="imagenes/outlook.jpg">
+                   <label>GEMUNICIPAL220@outlook.es </label>
+                </div>
+                
+            </div>        
+        </div>
+        <div class="ff">
+            <p>.</p>
+        </div>
+    
+    </footer>
+
+</body>
+</html>
